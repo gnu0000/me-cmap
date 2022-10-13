@@ -1,85 +1,6 @@
-CREATE TABLE familyacct (
-   acct        mediumtext,
-   postDate    datetime DEFAULT NULL,
-   checkNum    mediumtext,
-   description mediumtext,
-   debit       decimal(12,2) DEFAULT NULL,
-   credit      decimal(12,2) DEFAULT NULL,
-   status      tinytext,
-   balance     decimal(12,2) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-
-CREATE TABLE creditline (
-   acct        mediumtext,
-   postDate    datetime DEFAULT NULL,
-   checkNum    mediumtext,
-   description mediumtext,
-   debit       decimal(12,2) DEFAULT NULL,
-   credit      decimal(12,2) DEFAULT NULL,
-   status      tinytext,
-   balance     decimal(12,2) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-
-CREATE TABLE cornychecking (
-   acct        mediumtext,
-   postDate    datetime DEFAULT NULL,
-   checkNum    mediumtext,
-   description mediumtext,
-   debit       decimal(12,2) DEFAULT NULL,
-   credit      decimal(12,2) DEFAULT NULL,
-   status      tinytext,
-   balance     decimal(12,2) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-
-CREATE TABLE craigchecking (
-   acct        mediumtext,
-   postDate    datetime DEFAULT NULL,
-   checkNum    mediumtext,
-   description mediumtext,
-   debit       decimal(12,2) DEFAULT NULL,
-   credit      decimal(12,2) DEFAULT NULL,
-   status      tinytext,
-   balance     decimal(12,2) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-
-CREATE TABLE craigsavings (
-   acct        mediumtext,
-   postDate    datetime DEFAULT NULL,
-   checkNum    mediumtext,
-   description mediumtext,
-   debit       decimal(12,2) DEFAULT NULL,
-   credit      decimal(12,2) DEFAULT NULL,
-   status      tinytext,
-   balance     decimal(12,2) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-
-CREATE TABLE mortgage (
-   acct        mediumtext,
-   postDate    datetime DEFAULT NULL,
-   checkNum    mediumtext,
-   description mediumtext,
-   debit       decimal(12,2) DEFAULT NULL,
-   credit      decimal(12,2) DEFAULT NULL,
-   status      tinytext,
-   balance     decimal(12,2) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-
-CREATE TABLE rentalchecking (
-   acct        mediumtext,
-   postDate    datetime DEFAULT NULL,
-   checkNum    mediumtext,
-   description mediumtext,
-   debit       decimal(12,2) DEFAULT NULL,
-   credit      decimal(12,2) DEFAULT NULL,
-   status      tinytext,
-   balance     decimal(12,2) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+# currentlty, only positions is used by the app.
+# I can derive the stops more accurately from the
+# position data that the existing stops data
 
 
 CREATE TABLE stops (
@@ -106,14 +27,3 @@ CREATE TABLE positions (
    description varchar(255)               
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-
-
-===============================================
-
-CREATE TABLE cornychecking  ( acct mediumtext, postDate datetime DEFAULT NULL, checkNum mediumtext, description mediumtext, debit decimal(12,2) DEFAULT NULL, credit decimal(12,2) DEFAULT NULL, status tinytext, balance decimal(12,2) DEFAULT NULL) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-CREATE TABLE craigchecking  ( acct mediumtext, postDate datetime DEFAULT NULL, checkNum mediumtext, description mediumtext, debit decimal(12,2) DEFAULT NULL, credit decimal(12,2) DEFAULT NULL, status tinytext, balance decimal(12,2) DEFAULT NULL) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-CREATE TABLE craigsavings   ( acct mediumtext, postDate datetime DEFAULT NULL, checkNum mediumtext, description mediumtext, debit decimal(12,2) DEFAULT NULL, credit decimal(12,2) DEFAULT NULL, status tinytext, balance decimal(12,2) DEFAULT NULL) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-CREATE TABLE creditline     ( acct mediumtext, postDate datetime DEFAULT NULL, checkNum mediumtext, description mediumtext, debit decimal(12,2) DEFAULT NULL, credit decimal(12,2) DEFAULT NULL, status tinytext, balance decimal(12,2) DEFAULT NULL) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-CREATE TABLE familyacct     ( acct mediumtext, postDate datetime DEFAULT NULL, checkNum mediumtext, description mediumtext, debit decimal(12,2) DEFAULT NULL, credit decimal(12,2) DEFAULT NULL, status tinytext, balance decimal(12,2) DEFAULT NULL) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-CREATE TABLE mortgage       ( acct mediumtext, postDate datetime DEFAULT NULL, checkNum mediumtext, description mediumtext, debit decimal(12,2) DEFAULT NULL, credit decimal(12,2) DEFAULT NULL, status tinytext, balance decimal(12,2) DEFAULT NULL) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-CREATE TABLE rentalchecking ( acct mediumtext, postDate datetime DEFAULT NULL, checkNum mediumtext, description mediumtext, debit decimal(12,2) DEFAULT NULL, credit decimal(12,2) DEFAULT NULL, status tinytext, balance decimal(12,2) DEFAULT NULL) ENGINE=MyISAM DEFAULT CHARSET=utf8;
