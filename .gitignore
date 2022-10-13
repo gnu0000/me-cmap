@@ -5,3 +5,4 @@ bkup/
 *.bak
 *.zip
 *.dump
+*.withkey
