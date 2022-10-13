@@ -1,18 +1,6 @@
 #!perl
 #
-# select min(lat), max(lat), min(lon), max(lon),  max(lat)-min(lat) as dlat, max(lon)-min(lon) as dlon from stops where location like "%2nd Avenue%";
-#
-# eval (29.651701143613035 - 29.650280057552443)/2
-# 0.000710543
-# 
-# eval 29.650280057552443 + (29.651701143613035 - 29.650280057552443)/2
-# 29.6509906006
-# 
-# eval (-82.3194931476251 - -82.31814889346224)/2
-# -0.0006721271
-# 
-# eval -82.3194931476251 - (-82.3194931476251 - -82.31814889346224)/2
-# -82.3188210205
+# query position data
 
 use warnings;
 use strict;
@@ -48,8 +36,7 @@ MAIN:
 
 
 sub QueryPositions {
-   my $what = ArgGet();
-
+   my $what   = ArgGet();
    my $loc    = $LOCS->{$what} or die "what is $what?";
    my $leeway = ArgIs("leeway") ? ArgGet("leeway") : $ loc->{leeway};
    my $fence  = GeoFence($loc, $leeway);
@@ -63,8 +50,6 @@ sub QueryPositions {
    my $rows = FetchArray($sql);
    map {print "$_->{time} $_->{duration} $_->{location} $_->{lat} $_->{lon}\n"} @{$rows};
 }
-
-
 
 sub QueryStops {
    my $what = ArgGet();
@@ -96,5 +81,7 @@ sub GeoFence {
 __DATA__
 
 [usage]
-loadstops usage...   
-
+todo...
+examples:
+   stops.pl -positions matt
+   stops.pl white
