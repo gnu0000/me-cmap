@@ -95,7 +95,7 @@ class MapRunner {
    }
 
    ShowPopup(e, marker) {
-      this.popup.setContent(this.GetTitle(marker.stop));
+      this.popup.setContent(this.GetInfo(marker.stop));
       this.popup.open({
          anchor: marker,
          map: this.map,
@@ -103,12 +103,13 @@ class MapRunner {
       });
    }
 
-   GetTitle(stop) {
+   GetInfo(stop) {
       let gtime = stop.time.split(" ")[1];
       let parts = gtime.split(":");
       let pday = parts[0] - 0  > 11 ? "pm" : "am";
       if (parts[0] > 12) parts[0] -= 12;
-      return `${parts[0]}:${parts[1]}:${parts[2]}${pday} for ${stop.duration}`;
+      let txt = `<div>${parts[0]}:${parts[1]}:${parts[2]}${pday} for ${stop.duration} <a href="http://maps.google.com/maps?q=${stop.lat},${stop.lon}&z=15" target="_blank">map</a></div>`;
+      return txt;
    }
 
    DateChange() {
