@@ -32,7 +32,6 @@ sub Load {
 sub LoadPositions {
    my ($fh) = @_;
 
-   my $sql = "INSERT INTO positions (isstop, time, duration, lat, lon, heading, speed, elevation, location, description) VALUES (?,?,?,?,?,?,?,?,?,?)";
    my $prevrec;
    while (my $line = <$fh>) {
       next unless $line =~ /True|False/i;

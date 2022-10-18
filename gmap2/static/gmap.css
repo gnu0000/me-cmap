@@ -1,0 +1,14 @@
+
+#inputs {
+   position: absolute;
+   width:  20rem;
+   height: 2rem;
+   bottom: 2rem;
+   left: 40%;
+   background: white;
+   border: 1px solid lightblue;
+}
+
+#date {
+   margin: 0.4rem;
+}

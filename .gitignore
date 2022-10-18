@@ -1,7 +1,7 @@
-node_modules/
-build/
-dist/
 bkup/
+data/
+*.csv
+*.json
 *.bak
 *.zip
 *.dump

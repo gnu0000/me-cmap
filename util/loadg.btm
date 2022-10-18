@@ -1,0 +1,130 @@
+rem loadgoogle.pl ..\json\2013_JANUARY.json
+rem loadgoogle.pl ..\json\2013_FEBRUARY.json
+rem loadgoogle.pl ..\json\2013_MARCH.json
+rem loadgoogle.pl ..\json\2013_APRIL.json
+rem loadgoogle.pl ..\json\2013_MAY.json
+rem loadgoogle.pl ..\json\2013_JUNE.json
+rem loadgoogle.pl ..\json\2013_JULY.json
+rem loadgoogle.pl ..\json\2013_AUGUST.json
+rem loadgoogle.pl ..\json\2013_SEPTEMBER.json
+rem loadgoogle.pl ..\json\2013_OCTOBER.json
+rem loadgoogle.pl ..\json\2013_NOVEMBER.json
+rem loadgoogle.pl ..\json\2013_DECEMBER.json
+rem 
+rem loadgoogle.pl ..\json\2014_JANUARY.json
+rem loadgoogle.pl ..\json\2014_FEBRUARY.json
+rem loadgoogle.pl ..\json\2014_MARCH.json
+rem loadgoogle.pl ..\json\2014_APRIL.json
+rem loadgoogle.pl ..\json\2014_MAY.json
+rem loadgoogle.pl ..\json\2014_JUNE.json
+rem loadgoogle.pl ..\json\2014_JULY.json
+rem loadgoogle.pl ..\json\2014_AUGUST.json
+rem loadgoogle.pl ..\json\2014_SEPTEMBER.json
+rem loadgoogle.pl ..\json\2014_OCTOBER.json
+rem loadgoogle.pl ..\json\2014_NOVEMBER.json
+rem loadgoogle.pl ..\json\2014_DECEMBER.json
+rem 
+rem loadgoogle.pl ..\json\2015_JANUARY.json
+rem loadgoogle.pl ..\json\2015_FEBRUARY.json
+rem loadgoogle.pl ..\json\2015_MARCH.json
+rem loadgoogle.pl ..\json\2015_APRIL.json
+rem loadgoogle.pl ..\json\2015_MAY.json
+rem loadgoogle.pl ..\json\2015_JUNE.json
+rem loadgoogle.pl ..\json\2015_JULY.json
+rem loadgoogle.pl ..\json\2015_AUGUST.json
+rem loadgoogle.pl ..\json\2015_SEPTEMBER.json
+rem loadgoogle.pl ..\json\2015_OCTOBER.json
+rem loadgoogle.pl ..\json\2015_NOVEMBER.json
+rem loadgoogle.pl ..\json\2015_DECEMBER.json
+rem 
+rem loadgoogle.pl ..\json\2016_JANUARY.json
+rem loadgoogle.pl ..\json\2016_FEBRUARY.json
+rem loadgoogle.pl ..\json\2016_MARCH.json
+rem loadgoogle.pl ..\json\2016_APRIL.json
+rem loadgoogle.pl ..\json\2016_MAY.json
+rem loadgoogle.pl ..\json\2016_JUNE.json
+rem loadgoogle.pl ..\json\2016_JULY.json
+rem loadgoogle.pl ..\json\2016_AUGUST.json
+rem loadgoogle.pl ..\json\2016_SEPTEMBER.json
+rem loadgoogle.pl ..\json\2016_OCTOBER.json
+rem loadgoogle.pl ..\json\2016_NOVEMBER.json
+rem loadgoogle.pl ..\json\2016_DECEMBER.json
+rem 
+rem loadgoogle.pl ..\json\2017_JANUARY.json
+rem loadgoogle.pl ..\json\2017_FEBRUARY.json
+rem loadgoogle.pl ..\json\2017_MARCH.json
+rem loadgoogle.pl ..\json\2017_APRIL.json
+rem loadgoogle.pl ..\json\2017_MAY.json
+rem loadgoogle.pl ..\json\2017_JUNE.json
+rem loadgoogle.pl ..\json\2017_JULY.json
+rem loadgoogle.pl ..\json\2017_AUGUST.json
+rem loadgoogle.pl ..\json\2017_SEPTEMBER.json
+rem loadgoogle.pl ..\json\2017_OCTOBER.json
+rem loadgoogle.pl ..\json\2017_NOVEMBER.json
+rem loadgoogle.pl ..\json\2017_DECEMBER.json
+ 
+loadgoogle.pl ..\json\2018_JANUARY.json
+loadgoogle.pl ..\json\2018_FEBRUARY.json
+loadgoogle.pl ..\json\2018_MARCH.json
+loadgoogle.pl ..\json\2018_APRIL.json
+loadgoogle.pl ..\json\2018_MAY.json
+loadgoogle.pl ..\json\2018_JUNE.json
+loadgoogle.pl ..\json\2018_JULY.json                  c
+loadgoogle.pl ..\json\2018_AUGUST.json
+loadgoogle.pl ..\json\2018_SEPTEMBER.json
+loadgoogle.pl ..\json\2018_OCTOBER.json
+loadgoogle.pl ..\json\2018_NOVEMBER.json
+loadgoogle.pl ..\json\2018_DECEMBER.json
+
+
+loadgoogle.pl ..\json\2019_JANUARY.json
+loadgoogle.pl ..\json\2019_FEBRUARY.json
+loadgoogle.pl ..\json\2019_MARCH.json
+loadgoogle.pl ..\json\2019_APRIL.json
+loadgoogle.pl ..\json\2019_MAY.json
+loadgoogle.pl ..\json\2019_JUNE.json
+loadgoogle.pl ..\json\2019_JULY.json
+loadgoogle.pl ..\json\2019_AUGUST.json
+loadgoogle.pl ..\json\2019_SEPTEMBER.json
+loadgoogle.pl ..\json\2019_OCTOBER.json
+loadgoogle.pl ..\json\2019_NOVEMBER.json
+loadgoogle.pl ..\json\2019_DECEMBER.json
+
+loadgoogle.pl ..\json\2020_JANUARY.json
+loadgoogle.pl ..\json\2020_FEBRUARY.json
+loadgoogle.pl ..\json\2020_MARCH.json
+loadgoogle.pl ..\json\2020_APRIL.json
+loadgoogle.pl ..\json\2020_MAY.json
+loadgoogle.pl ..\json\2020_JUNE.json
+loadgoogle.pl ..\json\2020_JULY.json
+loadgoogle.pl ..\json\2020_AUGUST.json
+loadgoogle.pl ..\json\2020_SEPTEMBER.json
+loadgoogle.pl ..\json\2020_OCTOBER.json
+loadgoogle.pl ..\json\2020_NOVEMBER.json
+loadgoogle.pl ..\json\2020_DECEMBER.json
+
+loadgoogle.pl ..\json\2021_JANUARY.json
+loadgoogle.pl ..\json\2021_FEBRUARY.json
+loadgoogle.pl ..\json\2021_MARCH.json
+loadgoogle.pl ..\json\2021_APRIL.json
+loadgoogle.pl ..\json\2021_MAY.json
+loadgoogle.pl ..\json\2021_JUNE.json
+loadgoogle.pl ..\json\2021_JULY.json
+loadgoogle.pl ..\json\2021_AUGUST.json
+loadgoogle.pl ..\json\2021_SEPTEMBER.json
+loadgoogle.pl ..\json\2021_OCTOBER.json
+loadgoogle.pl ..\json\2021_NOVEMBER.json
+loadgoogle.pl ..\json\2021_DECEMBER.json
+
+loadgoogle.pl ..\json\2022_JANUARY.json
+loadgoogle.pl ..\json\2022_FEBRUARY.json
+loadgoogle.pl ..\json\2022_MARCH.json
+loadgoogle.pl ..\json\2022_APRIL.json
+loadgoogle.pl ..\json\2022_MAY.json
+loadgoogle.pl ..\json\2022_JUNE.json
+loadgoogle.pl ..\json\2022_JULY.json
+loadgoogle.pl ..\json\2022_AUGUST.json
+loadgoogle.pl ..\json\2022_SEPTEMBER.json
+loadgoogle.pl ..\json\2022_OCTOBER.json
+loadgoogle.pl ..\json\2022_NOVEMBER.json
+loadgoogle.pl ..\json\2022_DECEMBER.json
