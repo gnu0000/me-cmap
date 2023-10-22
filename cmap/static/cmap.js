@@ -13,7 +13,7 @@ class MapRunner {
       this.CreateMap();
       this.CreatePopup();
 
-      $("#date").get(0).valueAsDate = new Date();
+      $(" #date").get(0).valueAsDate = new Date();
       $("#date").on("change", (e) => this.DateChange(e));
       $("#prev").on("click" , (e) => this.NextDate(-1));
       $("#next").on("click" , (e) => this.NextDate(1));
@@ -39,15 +39,40 @@ class MapRunner {
       }
    }
 
-   CreateMap(options) {
+   async CreateMap(options) {
       this.o = Object.assign(this.defaultPos, options);
       this.map = new google.maps.Map(document.getElementById('map'), this.o);
+
+      //const { Map } = await google.maps.importLibrary("maps");
+      //this.map = new Map(document.getElementById("map"), {
+      //   center:{lat:29.649813,lng:-82.316970},
+      //   zoom:13 
+      //});
    }
 
    CreatePopup() {
       this.popup = new google.maps.InfoWindow({
          content: "<div>This is a test</div>",
       });
+   }
+
+   MarkerIcon(time) {
+      let hour  = time.substr(11,2) - 0;
+      let zhour = (hour + 19) % 24;
+      let label = (hour - 1) % 12 + 1;
+      let fs    = label < 10 ? 10   : 7.5;
+      let fx    = label < 10 ? 3.75 : 2;
+      let fy    = label < 10 ? 10   : 9;
+      let color = zhour < 7  ? "hsla(144, 100%, 18%, 0.7)" :
+                  zhour < 15 ? "hsla(233, 100%, 40%, 0.7)" :
+                               "hsla(0  , 100%, 38%, 0.7)" ;
+      let template = 
+         "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 20' height='200' width='140'>" +
+            "<path d='M7 0 L14 3 7 20 0 3 Z' fill='{color}' />" +
+            "<text fill='white' font-size='{fs}' font-family='Verdana' x='{fx}' y='{fy}'>{label}</text>" +
+         "</svg>";
+      let svg = template.replace(/{color}/, color).replace(/{fs}/,fs).replace(/{fx}/,fx).replace(/{fy}/,fy).replace(/{label}/,label);
+      return "data:image/svg+xml," + svg;
    }
 
    PlotStops(date) {
@@ -68,16 +93,19 @@ class MapRunner {
          lineData.map((pt) => bounds.extend(new google.maps.LatLng(pt.lat, pt.lng)));
       }
       let stops = this.stopMap[date];
-      if (!stops) return;
-
+      if (!stops) 
+         return;
       for (let stop of stops) {
          let marker = new google.maps.Marker({
              position: {lat:stop.lat - 0,lng:stop.lon - 0},
              map: this.map,
+             icon: {url: this.MarkerIcon(stop.time), scaledSize: new google.maps.Size(35, 35)},
+             optimized: false
          });
          marker.stop = stop;
          marker.addListener("click", (e) => this.ShowPopup(e, marker));
          this.markers.push(marker);
+
          bounds.extend(new google.maps.LatLng(stop.lat, stop.lon));
       }
 
@@ -142,6 +170,12 @@ class MapRunner {
 
 $(function() {
    let options = {zoom:13, center:{lat:29.649813,lng:-82.316970}};
+
+  //(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+  //  key: "AIzaSyBVLyUcEXJgaDleyYLIkqX6D9sA_CSHH78",
+  //  v: "weekly",
+  //});
+
    var mr = new MapRunner(options);
 });
 

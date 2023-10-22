@@ -21,17 +21,19 @@ my $LOCS = {
    matt   => {lat=>29.83244221104071 , lon=>-82.60120848674829, leeway=>0.0005 },
    monique=> {lat=>29.664112030777734, lon=>-82.34515105262169, leeway=>0.0005 },
    rocco  => {lat=>29.650778913772328, lon=>-82.31419038238347, leeway=>0.0005 },
+   east   => {lat=>29.597422,          lon=>-82.158997        , leeway=>0.0030 },
 };
 
 MAIN:
    Connection("geo");
 
-   ArgBuild("*^leeway= *^debug *^positions *^help");
+   ArgBuild("*^leeway= *^debug *^positions *^any *^help");
    ArgParse(@ARGV) or die ArgGetError();
    Usage() if ArgIs("help") || !ArgIs();
 
    QueryPositions() if ArgIs("positions");
-   QueryStops()     if !ArgIs("positions");
+   QueryAny      () if ArgIs("any");
+   QueryStops();
    exit(0);
 
 
@@ -49,6 +51,23 @@ sub QueryPositions {
 
    my $rows = FetchArray($sql);
    map {print "$_->{time} $_->{duration} $_->{location} $_->{lat} $_->{lon}\n"} @{$rows};
+   exit(0);
+}
+
+sub QueryAny {
+   my $what   = ArgGet();
+   my $loc    = $LOCS->{$what} or die "what is $what?";
+   my $leeway = ArgIs("leeway") ? ArgGet("leeway") : $ loc->{leeway};
+   my $fence  = GeoFence($loc, $leeway);
+
+   my $sql =
+      "SELECT * FROM positions WHERE " .
+      "lat > $fence->{it} AND lat < $fence->{xt} AND " .
+      "lon > $fence->{in} AND lon < $fence->{xn}";
+
+   my $rows = FetchArray($sql);
+   map {print "$_->{time} $_->{duration} $_->{location} $_->{lat} $_->{lon}\n"} @{$rows};
+   exit(0);
 }
 
 sub QueryStops {
@@ -65,6 +84,7 @@ sub QueryStops {
 
    my $rows = FetchArray($sql);
    map {print "$_->{Begin} $_->{End} $_->{Description}      ($_->{Location})\n"} @{$rows};
+   exit(0);
 }
 
 sub GeoFence {
@@ -84,4 +104,5 @@ __DATA__
 todo...
 examples:
    stops.pl -positions matt
+   stops.pl -any east
    stops.pl white
